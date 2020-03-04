@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Joakim
@@ -12,6 +13,27 @@
 </head>
 <body>
 <h1>Webshop</h1>
+
+${sessionScope.message}
 Du er nu klar til at købe ind!
+
+<form action="AddItemServlet" method="post">
+    <label for="name">Varenavn: </label><br>
+    <input type="text" id="name" name="product"><br>
+    <input type="submit" value="Tilføj">
+</form>
+<br><br>
+
+${requestScope.message}
+<br>
+
+<c:forEach var="element" items="${sessionScope.basket}">
+    ${element}
+    <br>
+</c:forEach>
+
+<form action="LogoutServlet" method="post">
+    <input type="submit" value="Logud">
+</form>
 </body>
 </html>

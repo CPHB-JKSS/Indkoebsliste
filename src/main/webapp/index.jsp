@@ -14,6 +14,9 @@
 <h1>
     Velkommen til webshoppen.
 </h1>
+
+${sessionScope.message}
+<br>
 ${requestScope.message}
 
 <form action="LoginServlet" method="post">
