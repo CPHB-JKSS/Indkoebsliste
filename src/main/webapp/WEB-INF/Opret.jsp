@@ -20,7 +20,7 @@ Her kan du registrere dig som bruger på indkøbslisten.
     <input type="text" id="name" name="name"><br>
     <label for="password">Password:</label><br>
     <input type="text" id="password" name="password"><br><br>
-    <input type="submit" value="Login">
+    <input type="submit" value="Opret">
 </form>
 </body>
 </html>

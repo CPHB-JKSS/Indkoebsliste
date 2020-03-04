@@ -19,6 +19,7 @@ public class LoginServlet extends HttpServlet {
         if (servletContext.getAttribute("userMap") == null) {
             Map<String, String> userMap  = new HashMap<>();
             userMap.put("test", "test");
+            userMap.put("admin", "admin");
             servletContext.setAttribute("userMap", userMap);
         }
 
@@ -29,8 +30,12 @@ public class LoginServlet extends HttpServlet {
         }
 
         if (((Map<String, String>)servletContext.getAttribute("userMap")).get(name).equals(password)) {
-            //todo go to indkøbsliste
             response.getWriter().println("Password is correct!");
+
+            //todo go to adminside
+            if(name.equalsIgnoreCase("admin")) {
+                request.getRequestDispatcher("WEB-INF/Admin.jsp").forward(request,response);
+            }
             request.getRequestDispatcher("WEB-INF/Indkoebsliste.jsp").forward(request,response);
         }
 

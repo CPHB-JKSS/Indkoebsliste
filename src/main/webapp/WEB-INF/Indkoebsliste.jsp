@@ -11,7 +11,7 @@
     <title>Indkøbsliste</title>
 </head>
 <body>
-Du har nu adgang til din indkøbsliste!
+<h1>Du har nu adgang til din indkøbsliste!</h1>
 
 </body>
 </html>
