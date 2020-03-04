@@ -11,10 +11,12 @@
     <title>Indkøbsliste</title>
 </head>
 <body>
-Velkommen til din online indkøbsliste.
+<h1>
+    Velkommen til din online indkøbsliste.
+</h1>
+${requestScope.message}
 
-
-<form action="LoginServlet" method = "post">
+<form action="LoginServlet" method="post">
     <label for="name">Username:</label><br>
     <input type="text" id="name" name="name"><br>
     <label for="password">Password:</label><br>
