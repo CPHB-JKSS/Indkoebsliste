@@ -13,7 +13,7 @@
 <body>
 ${requestScope.message}
 <br>
-Her kan du registrere dig som bruger på indkøbslisten.
+Her kan du registrere dig som bruger på webshoppen!
 <br>
 <form action="OpretServlet" method="post">
     <label for="name">Username:</label><br>

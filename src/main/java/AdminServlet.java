@@ -15,7 +15,6 @@ public class AdminServlet extends HttpServlet {
         String name = request.getParameter("name");
 
         if (!((Map<String,String>)servletContext.getAttribute("userMap")).containsKey(name)) {
-
             request.setAttribute("message", "Username: '" + name + "' does not exist!");
             request.getRequestDispatcher("WEB-INF/Admin.jsp").forward(request,response);
         }
