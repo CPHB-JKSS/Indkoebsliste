@@ -16,7 +16,7 @@ public class LoginServlet extends HttpServlet {
         String name = request.getParameter("name");
         String password = request.getParameter("password");
 
-        if (servletContext.getAttribute("usersMap") == null) {
+        if (servletContext.getAttribute("userMap") == null) {
             Map<String, String> userMap  = new HashMap<>();
             userMap.put("test", "test");
             servletContext.setAttribute("userMap", userMap);
@@ -24,8 +24,8 @@ public class LoginServlet extends HttpServlet {
 
         if (!((Map<String, String>)servletContext.getAttribute("userMap")).containsKey(name)) {
             //todo go to login
-            request.setAttribute("message", "Username does not exist!");
-            request.getRequestDispatcher("index.jsp").forward(request,response);
+            request.setAttribute("message", "Brugernavnet du har indtastet, findes ikke.");
+            request.getRequestDispatcher("WEB-INF/Opret.jsp").forward(request,response);
         }
 
         if (((Map<String, String>)servletContext.getAttribute("userMap")).get(name).equals(password)) {

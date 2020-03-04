@@ -12,5 +12,6 @@
 </head>
 <body>
 Du har nu adgang til din indkøbsliste!
+
 </body>
 </html>
