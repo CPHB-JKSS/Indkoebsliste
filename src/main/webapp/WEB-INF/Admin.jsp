@@ -13,6 +13,10 @@
 </head>
 <body>
 <h1>Admin</h1>
+
+${requestScope.message}
+<br><br>
+
 Her kan du se listen over brugere, og slette dem.
 <br>
 <br>
@@ -20,5 +24,13 @@ Her kan du se listen over brugere, og slette dem.
     ${element}
     <br>
 </c:forEach>
+<br>
+Slet en bruger:
+<form action="AdminServlet" method="post">
+    <label for="name">Username:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <input type="submit" value="Slet">
+</form>
+
 </body>
 </html>
